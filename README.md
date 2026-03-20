@@ -227,13 +227,22 @@ Benefits include:
 * Scalable insurance model for gig economies
 
 ---
+# 12. Prototype
 
-# 12. Team Details
+Access the interactive prototype of our platform below:
+
+- 🔗 **Prototype Link**: [View Prototype](https://chuck-trade-88561109.figma.site/)
+
+> This prototype demonstrates the core workflow including onboarding, policy selection, disruption detection, and automated claim flow.
+--------------
+
+# 13. Team Details
 
 Team Name: **Bug Masters**
 * **Lekhana Gembali** (2300031636)
 * **Burla Lakshmi Prasanna** (2300031726)
 * **Bhimavarapu Dhatri Reddy** (2300032610)
 * **Maradani Baby Sowmya Sri** (2300090321)
+
 
 
