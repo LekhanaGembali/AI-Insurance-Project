@@ -1,0 +1,756 @@
+Build a **complete full-stack web application** named **InSureGig** using:
+
+* **Frontend:** React.js
+* **Backend:** Node.js + Express.js
+* **Database:** MongoDB
+
+The application must be built as a **working full-stack hackathon MVP**, not just a frontend prototype.
+
+It should satisfy the **Phase 2 requirement: Automation & Protection**, and the solution must clearly demonstrate:
+
+1. **Registration Process**
+2. **Insurance Policy Management**
+3. **Dynamic Premium Calculation**
+4. **Claims Management**
+
+The application should also include:
+
+* **3 to 5 automated disruption triggers**
+* **zero-touch / auto-claim workflow**
+* **modern, polished, demo-ready UI**
+* **real backend integration**
+* **MongoDB data persistence**
+
+---
+
+# 1. Product Goal
+
+Build **InSureGig**, an AI-inspired parametric insurance platform for gig delivery workers.
+
+The platform should protect delivery workers from **loss of income caused by external disruptions**, such as:
+
+* heavy rain
+* severe pollution
+* extreme heat
+* curfew / local zone closure
+
+Important constraints:
+
+* The platform must cover **income loss only**
+* Do **not** include health insurance, life insurance, accident insurance, or vehicle repair
+* Pricing must be based on a **weekly premium**
+* Claims should be **automatically triggered**
+* Payout can be simulated, but the full workflow must be functional
+
+---
+
+# 2. What the App Must Demonstrate
+
+The final app must clearly show these Phase 2 deliverables:
+
+## A. Registration Process
+
+A worker must be able to:
+
+* sign up
+* log in
+* create profile
+* provide city, platform, weekly income, and basic details
+
+## B. Insurance Policy Management
+
+A worker must be able to:
+
+* view available weekly plans
+* select a plan
+* activate a policy
+* view active policy details
+* see plan coverage and weekly premium
+
+## C. Dynamic Premium Calculation
+
+The app must calculate premium dynamically based on:
+
+* city
+* disruption risk
+* zone safety / risk adjustments
+
+Use **mock AI logic** for this.
+
+Example:
+
+* Mumbai → higher rain risk
+* Delhi → higher pollution risk
+* Hyderabad → higher heat risk
+* safe zones → discount
+
+## D. Claims Management
+
+The app must show:
+
+* disruption detection
+* automatic claim triggering
+* claim approval / rejection
+* payout simulation
+* claim status updates
+
+---
+
+# 3. Tech Stack Requirements
+
+Use exactly this stack.
+
+## Frontend
+
+* React.js
+* React Router
+* Axios
+* modern component-based architecture
+
+## Backend
+
+* Node.js
+* Express.js
+* REST APIs
+* MVC or modular folder structure
+
+## Database
+
+* MongoDB
+* Mongoose ODM
+
+---
+
+# 4. User Roles
+
+Create 2 roles.
+
+## Worker
+
+Can:
+
+* register
+* login
+* view dashboard
+* choose plan
+* see premium adjustments
+* receive disruption alerts
+* see auto-claim status
+* view payout success
+* view claims history
+
+## Admin
+
+Can:
+
+* login
+* view all users
+* manage policies
+* create disruption events
+* trigger auto-claims
+* view claims
+* view fraud alerts
+* monitor dashboard analytics
+
+---
+
+# 5. Frontend Pages to Build
+
+Build these pages in React.
+
+## Public Pages
+
+1. Landing page
+2. Worker registration page
+3. Worker login page
+4. Admin login page
+
+## Worker Pages
+
+5. Worker dashboard
+6. Choose plan page
+7. Premium calculation / risk adjustment page
+8. Auto-claim / weather alert page
+9. Payout success page
+10. Claim history page
+11. Profile page
+
+## Admin Pages
+
+12. Admin dashboard
+13. Manage workers page
+14. Manage disruptions page
+15. Manage claims page
+16. Fraud alerts page
+
+---
+
+# 6. Exact UI Style
+
+Design the UI like a premium insurance-tech dashboard.
+
+## Visual Requirements
+
+* blue hero/header section
+* white rounded cards
+* soft shadows
+* clean typography
+* premium card layout
+* responsive design
+* professional dashboard appearance
+
+## Important UI Sections
+
+Build these screens with strong visual quality:
+
+* onboarding / registration screen
+* choose your plan screen
+* risk adjustments card
+* final premium card
+* worker dashboard
+* weather alert / auto-claim screen
+* payout successful screen
+
+---
+
+# 7. Frontend Build Instructions (Step-by-Step)
+
+## Step 1: Setup React Project
+
+Create React app and install:
+
+* react-router-dom
+* axios
+* any UI library if needed, or use custom CSS
+
+## Step 2: Create Frontend Folder Structure
+
+Use structure like:
+
+* src/components
+* src/pages
+* src/layouts
+* src/services
+* src/utils
+* src/context
+* src/assets
+
+## Step 3: Create Shared UI Components
+
+Build reusable components such as:
+
+* Navbar
+* Sidebar
+* HeroHeader
+* PlanCard
+* MetricCard
+* StatusBadge
+* SectionCard
+* AlertBanner
+* PayoutDetailsCard
+* FormInput
+* ActionButton
+
+## Step 4: Build Authentication Pages
+
+Create:
+
+* worker register page
+* worker login page
+* admin login page
+
+These should connect to backend auth APIs.
+
+## Step 5: Build Worker Dashboard
+
+Display:
+
+* welcome message
+* current active plan
+* earnings protected
+* risk level
+* recent claim
+* payout summary
+* upgrade plan button
+
+## Step 6: Build Choose Plan Page
+
+Show 3 plans:
+
+### Basic
+
+* ₹20/week
+* ₹500 coverage
+
+### Standard
+
+* ₹35/week
+* ₹1000 coverage
+
+### Premium
+
+* ₹63/week
+* ₹1500 coverage
+
+Include:
+
+* select button
+* features list
+* one “Popular” badge
+
+## Step 7: Build Risk Adjustment Page
+
+Show:
+
+* base premium
+* heavy rain alert adjustment
+* poor AQI adjustment
+* safe zone discount
+* final weekly premium card
+
+## Step 8: Build Auto-Claim Alert Page
+
+Display:
+
+* weather icon
+* disruption title
+* city alert message
+* claim approval status
+* 100% complete progress
+* auto-claim activation message
+
+## Step 9: Build Payout Success Page
+
+Display:
+
+* title: Payout Successful
+* credited amount
+* date
+* time
+* transaction ID
+* success card
+
+## Step 10: Connect Frontend to Backend APIs
+
+Use Axios to:
+
+* register/login
+* fetch plans
+* select policy
+* get premium calculation
+* fetch worker dashboard
+* fetch claims
+* get auto-claim status
+* get payout details
+
+---
+
+# 8. Backend Features to Build
+
+Build the backend using **Node.js + Express.js**.
+
+## Required Backend Modules
+
+### 1. Authentication Module
+
+* worker registration
+* worker login
+* admin login
+
+### 2. User/Profile Module
+
+* get worker profile
+* update worker profile
+* get all workers (admin)
+
+### 3. Policy Module
+
+* get available plans
+* select / activate plan
+* get active policy
+* get policy history
+
+### 4. Risk Calculation Module
+
+Implement mock AI logic for dynamic premium calculation.
+
+Input:
+
+* city
+* plan type
+* current disruption profile
+
+Output:
+
+* base premium
+* risk adjustments
+* final premium
+* risk category
+
+### 5. Disruption Module
+
+Admin can:
+
+* create disruption event
+* activate disruption
+* deactivate disruption
+* list all disruptions
+
+Supported disruptions:
+
+* rain
+* heat
+* pollution
+* curfew
+
+### 6. Claims Module
+
+When disruption becomes active:
+
+* find matching workers in that city
+* check active policies
+* auto-generate claims
+* approve if valid
+* simulate payout
+
+### 7. Fraud Detection Module
+
+Add basic rules:
+
+* no active policy → reject
+* duplicate claim for same disruption → reject
+* city mismatch → reject
+* already processed claim → flag
+
+### 8. Dashboard Module
+
+Provide:
+
+* worker dashboard summary
+* admin dashboard summary
+
+---
+
+# 9. Backend Build Instructions (Step-by-Step)
+
+## Step 1: Setup Node.js + Express Project
+
+Install:
+
+* express
+* mongoose
+* cors
+* dotenv
+* bcryptjs
+* jsonwebtoken
+* nodemon
+
+Optional:
+
+* express-validator
+
+## Step 2: Create Backend Folder Structure
+
+Use structure like:
+
+* server.js
+* config/
+* models/
+* controllers/
+* routes/
+* middleware/
+* services/
+* utils/
+
+## Step 3: Setup MongoDB Connection
+
+Configure MongoDB connection using Mongoose.
+
+## Step 4: Create Models
+
+Create models for:
+
+* User
+* Policy
+* Disruption
+* Claim
+* FraudAlert
+
+## Step 5: Create Auth APIs
+
+* POST /api/auth/register
+* POST /api/auth/login
+* POST /api/auth/admin-login
+
+## Step 6: Create Policy APIs
+
+* GET /api/plans
+* POST /api/policies/select
+* GET /api/policies/active
+* GET /api/policies/history
+
+## Step 7: Create Risk APIs
+
+* POST /api/risk/calculate
+
+## Step 8: Create Disruption APIs
+
+* POST /api/admin/disruptions
+* GET /api/admin/disruptions
+* PATCH /api/admin/disruptions/:id/activate
+* PATCH /api/admin/disruptions/:id/deactivate
+
+## Step 9: Create Claims APIs
+
+* POST /api/claims/auto-trigger
+* GET /api/claims/my
+* GET /api/admin/claims
+* GET /api/admin/fraud-alerts
+
+## Step 10: Create Dashboard APIs
+
+* GET /api/worker/dashboard
+* GET /api/admin/dashboard
+
+---
+
+# 10. MongoDB Database Design
+
+Create these MongoDB collections.
+
+## users
+
+Fields:
+
+* fullName
+* phone
+* email
+* passwordHash
+* city
+* platform
+* weeklyIncome
+* role
+* createdAt
+
+## policies
+
+Fields:
+
+* userId
+* planName
+* basePremium
+* riskAdjustments
+* finalPremium
+* coverageAmount
+* status
+* startDate
+* endDate
+* createdAt
+
+## disruptions
+
+Fields:
+
+* city
+* type
+* severity
+* description
+* isActive
+* createdAt
+
+## claims
+
+Fields:
+
+* userId
+* policyId
+* disruptionId
+* payoutAmount
+* status
+* transactionId
+* createdAt
+* paidAt
+
+## fraudAlerts
+
+Fields:
+
+* claimId
+* userId
+* reason
+* createdAt
+
+---
+
+# 11. Dynamic Premium Logic
+
+Use rule-based logic that behaves like AI-inspired pricing.
+
+Example:
+
+* Basic plan base premium = ₹20
+* Standard plan base premium = ₹35
+* Premium plan base premium = ₹63
+
+Adjustments:
+
+* Heavy Rain Alert = +₹10
+* Poor AQI = +₹5
+* Safe Zone Discount = -₹2
+
+Examples:
+
+* Mumbai worker + rain risk = higher premium
+* Delhi worker + pollution risk = higher premium
+* safe zone worker = lower premium
+
+This calculation must be done in backend and sent to frontend.
+
+---
+
+# 12. Auto-Claim Workflow
+
+Implement a **zero-touch claims flow**.
+
+## Workflow
+
+1. Admin creates disruption event
+2. Event becomes active
+3. Backend finds workers in affected city
+4. Backend checks active policy
+5. Backend checks fraud rules
+6. Valid claims are auto-created
+7. Claim status becomes approved
+8. Payout is simulated
+9. Worker sees weather alert screen
+10. Worker sees payout success screen
+
+---
+
+# 13. Demo Data
+
+Create seed/demo data.
+
+## Worker Demo Account
+
+* one worker account
+* active policy
+* one claim ready to display
+
+## Admin Demo Account
+
+* one admin account
+
+## Demo Content
+
+* 3 plans
+* 3 disruptions
+* 2 claims
+* 1 fraud alert
+
+---
+
+# 14. App Flow
+
+## Worker Flow
+
+1. Register
+2. Login
+3. View dashboard
+4. Choose plan
+5. View premium calculation
+6. Activate plan
+7. Wait for disruption trigger
+8. See auto-claim screen
+9. See payout success page
+10. View claim history
+
+## Admin Flow
+
+1. Login
+2. Create disruption
+3. Activate disruption
+4. Trigger claims
+5. View all claims
+6. View fraud alerts
+
+---
+
+# 15. Implementation Sequence
+
+Build the project in this order:
+
+## Phase 1
+
+* setup frontend
+* setup backend
+* setup MongoDB
+* create folder structure
+
+## Phase 2
+
+* auth module
+* registration/login pages
+* worker/admin roles
+
+## Phase 3
+
+* policy management
+* plan selection UI
+* active policy flow
+
+## Phase 4
+
+* risk calculation backend
+* risk adjustment frontend
+
+## Phase 5
+
+* disruption management
+* auto-claim backend logic
+
+## Phase 6
+
+* weather alert page
+* payout success page
+* claim history
+
+## Phase 7
+
+* fraud rules
+* admin analytics
+* polish UI
+
+---
+
+# 16. Final Output Expected
+
+Generate a full working project with:
+
+1. React frontend
+2. Node.js + Express backend
+3. MongoDB integration
+4. clean folder structure
+5. reusable frontend components
+6. REST APIs
+7. seed/demo data
+8. connected worker flow
+9. connected admin flow
+10. polished insurtech UI
+11. clear setup instructions
+12. sample credentials
+
+---
+
+# 17. Final Instruction
+
+Build **InSureGig** as a **real full-stack web application**, not a static UI.
+
+The site must feel like a polished insurtech startup demo and clearly satisfy these hackathon Phase 2 requirements:
+
+* registration process
+* insurance policy management
+* dynamic premium calculation
+* claims management
+* automated triggers
+* zero-touch auto-claim flow
