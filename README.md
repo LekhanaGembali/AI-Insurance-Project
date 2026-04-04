@@ -129,7 +129,7 @@ React.js
 
 ### Backend
 
-Node.js / Express (or Spring Boot)
+Node.js + Express
 
 ### Database
 
